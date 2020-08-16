@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+ 
+{% block title %}
+コメント一覧
+{% endblock %}
+
+
+<body>
+{% block content %}
+<h1>コメント一覧</h1>
+<ul>
+    {% for comment in object_list %}
+      <li>
+          {{ comment.title }} : {{ comment.body }}
+      </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+</body>
+</html>
