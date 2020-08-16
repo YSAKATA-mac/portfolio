@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Predicton Page{% endblock %}
+
+
+{% block content %}
+
+<div>
+  <form action="" method="POST">
+  <table>
+    {{ form.as_table }}
+  </table>
+  {% csrf_token %}
+  <button type="submit">計算</button>
+  </form>
+  {% if ans != "" %}
+    {{ ans }} </br>
+  {% endif %}
+</div>
+
+{%endblock%}
