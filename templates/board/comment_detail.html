@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+  <div class="container">
+    <h1 class="my-5">コメント詳細</h1>
+    <div class="card mb-3">
+      <div class="card-header">
+        commentID : {{ comment.id }}
+      </div>
+      <div class="card-body">
+        <p class="card-text">Title : </p>
+        <h5 class="card-title">{{ comment.title }}</h5>
+        <p class="card-text">Body : </p>
+        <p class="card-text">{{ comment.body }}</p>
+      </div>
+      <div class="card-footer">
+        Created at : {{ comment.created_at }}<br>
+        Updated at : {{ comment.updated_at }}
+      </div>
+    </div>
+  </div>
+{% endblock content %}
