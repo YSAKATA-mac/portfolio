@@ -29,11 +29,12 @@ class CreateCommentView(CreateView):
         context['button_label'] = 'コメントを投稿する'
         return context
 
+
 class UpdateCommentView(UpdateView):
     model = Comment
     form_class = CommentForm
     success_url = reverse_lazy('comments:allcomments')
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page_title'] = 'コメントの更新'
