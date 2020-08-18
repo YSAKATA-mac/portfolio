@@ -8,12 +8,12 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('title', 'body')
         widgets = {
-              'title': forms.TextInput(attrs={
-              'class': 'form-control'
-            }),
-              'body': forms.TextInput(attrs={
-              'class': 'form-control'
-            }),
+               'title': forms.TextInput(attrs={
+                'class': 'form-control'
+                   }),
+               'body': forms.TextInput(attrs={
+                'class': 'form-control'
+                  }),
         }
         labels = {
             'title': 'タイトル',
