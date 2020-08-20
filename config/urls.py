@@ -11,6 +11,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/main/')),
     path('prediction/', include('prediction.urls')),
     path('main/', include('main.urls')),
+    path('board/', include('board.urls')),
+    path('link/', include('link.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
