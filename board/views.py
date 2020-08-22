@@ -11,6 +11,8 @@ from .models import Comment
 
 class CommentIndexView(ListView):
     model = Comment
+    ordering = ['-created_at']
+    paginate_by = 5
 
 
 class ShowCommentView(DetailView):
