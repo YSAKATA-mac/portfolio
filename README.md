@@ -1,3 +1,7 @@
+## Pythonanywhereのサービスを利用しdeployテストをしてみました。
+http://yuuji.pythonanywhere.com/main/
+
+
 あつまれどうぶつの森　カブ価予測ツール
 ====
 ## 概要
