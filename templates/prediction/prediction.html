@@ -5,17 +5,55 @@
 
 {% block content %}
 
-<div>
-  <form action="" method="POST">
-  <table>
-    {{ form.as_table }}
-  </table>
-  {% csrf_token %}
-  <button type="submit">計算</button>
-  </form>
-  {% if ans != "" %}
-    {{ ans }} </br>
-  {% endif %}
+<div id="contents">
+
+  <section>
+    <h2>株価予測フォーム</h2>
+
+    <table class="ta2">
+      <caption>このフォームの結果はあくまで予測であり、利用上生じる問題は一切関与致しません。</caption>
+      <form method="post" action="">
+      <tbody>
+        <tr>
+          <th></th>
+          <td>日曜</td>
+          <td>月曜</td>
+          <td>火曜</td>
+          <td>水曜</td>
+          <td>木曜</td>
+          <td>金曜</td>
+          <td>土曜</td>
+        </tr>
+        <tr>
+          <th>午前</th>
+          <td>{{ form.sun }}</td>
+          <td>{{ form.ma }}</td>
+          <td>{{ form.tua }}</td>
+          <td>{{ form.wa }}</td>
+          <td>{{ form.tha }}</td>
+          <td>{{ form.fa }}</td>
+          <td>{{ form.sa }}</td>
+        </tr>
+        <tr>
+          <th>午後</th>
+          <td></td>
+          <td>{{ form.mp }}</td>
+          <td>{{ form.tup }}</td>
+          <td>{{ form.wp }}</td>
+          <td>{{ form.thp }}</td>
+          <td>{{ form.fp }}</td>
+          <td>{{ form.sp }}</td>
+        </tr>
+      </tbody>
+      {% csrf_token %}
+      <button type="submit">計算</button>
+      </form>
+    </table>
+    {% if ans != "" %}
+      {{ ans }} </br>
+    {% endif %}
+  </section>
+
 </div>
 
 {%endblock%}
