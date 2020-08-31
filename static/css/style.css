@@ -273,3 +273,19 @@ body {
 .ws,.wl {width: 94%;}
 
 }
+
+.yt-wrapper {
+	position: relative;
+	width: 39%;
+	height: 100%;
+  }
+  .yt-wrapper:before {
+	content:"";
+	display: block;
+	padding-top: 56.25%;
+  }
+  .yt-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 100px;
+  }

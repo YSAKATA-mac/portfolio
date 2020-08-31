@@ -123,6 +123,13 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+# # 開発中はこれをコメント解除する
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+
+# デプロイ時はこれをコメント解除する
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 
@@ -130,7 +137,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-# デプロイ時の不具合のためコメントアウト
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-# ]
+
